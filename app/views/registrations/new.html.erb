@@ -1,0 +1,11 @@
+<div class="container">
+    <h3>Registration for <%= link_to @event.name, @event %></h3>
+    <%= form_with(model: [@event, @registration], local: true) do |f| %>
+        <%= f.label :how_heard %>
+        <%= f.select :how_heard, Registration::HOW_HEARD_OPTIONS,
+                    prompt: "Pick one" %>
+
+        <%= f.submit %>
+
+    <% end %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Attendees for <%= link_to @event.name, @event %></h2>
+  <ul class="registrations">
+    <% @registrations.each do |r| %>
+      <li>
+        <%= r.user.name%><%= link_to "Cancel", class: "btn-cancel",
+                          data: {turbo_method: :delete, turbo_confirm: "Really?!" }%>
+      </li>
+    <% end %>
+  </ul>
+<div>

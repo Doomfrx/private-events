@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1><%= link_to "EventLite", root_path %></h1>
+        <ul class="left">
+        <li>
+            <%= link_to "Upcoming", filtered_events_path(:upcoming) %>
+        </li>
+        <li>
+            <%= link_to "Past", filtered_events_path(:past) %>
+        </li>
+        <li>
+            <%= link_to "Events Attended", filtered_events_path(:past) %>
+        </li>
+        </ul>
+        <div class="right-nav">
+            <% if user_signed_in? %>
+                <%= link_to "Create Event", new_event_path, class:"button"%>
+                <%= link_to current_user.name, edit_user_registration_path, class: "nav-item nav-link" %>
+                <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-item nav-link" %>
+            <% else %>
+                <%= link_to "Sign Up", new_user_registration_path, class: "nav-item nav-link" %>
+                <%= link_to "Login", new_user_session_path, class: "nav-item nav-link" %>
+            <% end %>
+        </div>
+    </nav>
+</header>

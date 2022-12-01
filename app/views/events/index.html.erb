@@ -1,0 +1,10 @@
+<section class="event-list">
+    <% @events.each do |event| %>
+        <div class="event">
+            <div class="event-name"><%= link_to event.name, event%></div>
+            <div class="description"><%= truncate(event.description, length: 35, separator: ' ') %>
+                <div class="details"><span class="date"><%= event.date %></span> in <%= event.location %></div>
+            </div>
+        </div>
+    <% end %>
+</section>

@@ -1,0 +1,247 @@
+@import 'bootstrap';
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+.content {
+    @extend .container;
+}
+header {
+
+    a {
+        text-decoration: none;
+    }
+    .left {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        padding:5px;
+        a {
+            margin-left: 10px;
+        }
+    }
+    .right-nav {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .button{
+        padding: 10px;
+        background: rgb(57, 100, 255);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .button:hover {
+        background:white;
+        border: 1px solid rgb(57, 100, 255);
+        color: rgb(57, 100, 255);
+    }
+}
+
+//Sign-ing Log-in forms
+.container {
+    //height: 420px;
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    align-items: center;
+
+    .reg-list {
+        border: 1px solid black;;
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .registration {
+            display: flex;
+            margin-bottom: 5px;
+            .date {
+                margin-left: 3px;
+            }
+            .action {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+    h2, h3{
+        text-align: center;
+    }
+
+    .field {
+        margin: 10px auto;
+    }
+
+    #user_name, #user_email, #user_password, #user_password_confirmation, #user_current_password{
+        width: 100%;
+        color: black;
+        padding: 5px;
+    }
+    .btn {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .links {
+        width: 100%;
+        text-align: center;
+        a{
+            font-size: 14px;
+        }
+    }
+}
+
+//Event list
+
+.event-list {
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 2.5rem;
+
+    .event {
+        width: 200px;
+        height: 160px;
+        background: white;
+        padding: .9em;
+        border-radius: 6px;
+        border: 2px solid rgba(22, 80, 255, 0.638);
+          
+        .event-name{
+            text-transform: uppercase;
+            font-size: 1.6em;
+            font-weight: 600;
+            color: rgb(63, 121, 230);
+            padding: 10px 7px 0;
+        }
+          
+        .event-name:hover {
+            cursor: pointer;
+        }
+          
+        .description {
+            font-weight: 600;
+            color: rgb(88, 87, 87);
+            padding: 7px;
+        }
+          
+        .description:hover {
+            cursor: pointer;
+        }
+          
+        .details {
+            color: gray;
+            font-weight: 400;
+            font-size: 11px;
+            padding-top: 20px;
+        }
+          
+        .date {
+            font-weight: 600;
+        }
+          
+        .date:hover {
+            cursor: pointer;
+        }
+    
+    }
+}
+
+//Create Event
+.event-form{
+    margin:50px auto;
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+
+    h3 {
+        text-align:center;
+        margin-bottom: 20px;
+    }
+
+    #event_name, #event_location, #event_description {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    #registration_name, #registration_email {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    select {
+        color: black;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+
+// Event show
+.event-details{
+    margin:50px auto;
+    padding: 20px;
+    width: 600px;
+    background: white;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+    strong {
+        margin-bottom: 10px;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        padding-bottom: 10px;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+
+        .right .btn-attend {
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(0, 158, 82);
+            color: white;
+            text-decoration: none;
+        }
+        .btn-cancel {
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(178, 23, 9);
+            color: white;
+            text-decoration: none;
+        }
+        .right .btn-attend:hover {
+            background-color: white;
+            border: 1px solid rgb(0, 158, 82);
+            color: rgb(0, 158, 82);
+        }
+        .right .btn-cancel:hover {
+            background-color: white;
+            border: 1px solid rgb(178, 23, 9);
+            color: rgb(178, 23, 9);
+        }
+    }
+}
