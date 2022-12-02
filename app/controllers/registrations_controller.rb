@@ -25,10 +25,9 @@ class RegistrationsController < ApplicationController
     end
 
     def destroy
-        @event = Event.find(params[:event_id])
-        @registration = @event.registrations.find(params[:id])
+        @registration = current_user.registrations.find(params[:id])
         @registration.destroy
-        redirect_to event_path, notice: "Canceled"
+        redirect_to edit_user_registration_path, notice: "Cancelled"
     end
 
     private

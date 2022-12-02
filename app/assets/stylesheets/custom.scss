@@ -8,6 +8,10 @@ body{
 }
 header {
 
+    .left {
+        list-style: none;
+    }
+
     a {
         text-decoration: none;
     }
@@ -29,7 +33,7 @@ header {
     }
 
     .button{
-        padding: 10px;
+        padding: 7px;
         background: rgb(57, 100, 255);
         color: white;
         border-radius: 10px;
@@ -69,7 +73,7 @@ header {
         }
     }
 
-    h2, h3{
+    h2, h3, p{
         text-align: center;
     }
 
@@ -86,8 +90,19 @@ header {
         font-size: 14px;
         margin-bottom: 10px;
     }
-    .links {
+    .btn-cancel {
         width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: rgb(178, 23, 9);
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .links {
+        //width: 100%;
         text-align: center;
         a{
             font-size: 14px;
@@ -245,3 +260,4 @@ header {
         }
     }
 }
+

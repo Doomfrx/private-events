@@ -8,14 +8,11 @@
         <li>
             <%= link_to "Past", filtered_events_path(:past) %>
         </li>
-        <li>
-            <%= link_to "Events Attended", filtered_events_path(:past) %>
-        </li>
         </ul>
         <div class="right-nav">
             <% if user_signed_in? %>
                 <%= link_to "Create Event", new_event_path, class:"button"%>
-                <%= link_to current_user.name, edit_user_registration_path, class: "nav-item nav-link" %>
+                <strong><%= link_to current_user.name, edit_user_registration_path, class: "nav-item nav-link" %></strong>
                 <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-item nav-link" %>
             <% else %>
                 <%= link_to "Sign Up", new_user_registration_path, class: "nav-item nav-link" %>

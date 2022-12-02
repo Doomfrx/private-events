@@ -9,7 +9,7 @@
             <%= link_to "Attend Event", new_event_registration_url(@event.id), class: "btn-attend"%>
             <%if current_user.name == @event.user.name %>
                 <%= link_to "Edit", edit_event_path(@event), class: "btn-attend" %>
-                <%= link_to "Delete", @event, data: { turbo_method: :delete} %>
+                <%= link_to "Delete", @event, data: { turbo_method: :delete}, class: "btn-cancel"%>
             <%end%>
         </div>
     </div>

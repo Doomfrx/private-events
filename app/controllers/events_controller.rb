@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
 
+    before_action :authenticate_user!
+
     def index
         case params[:filter]
         when "past"

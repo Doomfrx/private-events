@@ -3,8 +3,7 @@
   <ul class="registrations">
     <% @registrations.each do |r| %>
       <li>
-        <%= r.user.name%><%= link_to "Cancel", class: "btn-cancel",
-                          data: {turbo_method: :delete, turbo_confirm: "Really?!" }%>
+        <%= r.user.name%>
       </li>
     <% end %>
   </ul>
